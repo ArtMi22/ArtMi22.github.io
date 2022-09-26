@@ -8,11 +8,31 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@font-face {
+ font-family: "Monument";
+	src: url(./fonts/Monument.otf)
+}
+
+@font-face {
+ font-family: "Milky";
+	src: url(./fonts/Milky.ttf)
+}
+
+@font-face {
+ font-family: "Charlevoix";
+	src: url(./fonts/Charlevoix.otf)
+}
+
+@font-face {
+ font-family: "Remboy";
+	src: url(./fonts/Remboy.otf)
+}
+
 body {
   background-COLOR: black;
 	background-size: 300% 300%;
 	animation: gradient 10s ease infinite;
-  font-family: "Inconsolata", monospace;
+  font-family: "Monument", monospace;
   color: white;
 }
 
