@@ -28,6 +28,27 @@
 	src: url(./fonts/Remboy.ttf)
 }
 
+			
+			/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffffff; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888; 
+}
+
 body {
   background-COLOR: black;
 	background-size: 300% 300%;
