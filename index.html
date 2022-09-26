@@ -46,7 +46,7 @@ window.onload = function fadeOutEffect() {
 
   <nav class="navbar navbar-light custom-navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Salut :D</a>
+      <a class="navbar-brand" href="index.html" style="font-family: Remboy; font-size: 40px; font-weight: bold;">Hysteresis</a>
         <span></span>
       </a>
 	  <br>
@@ -67,9 +67,16 @@ window.onload = function fadeOutEffect() {
         <div class="row mb-5 align-items-center">
           <div class="col-md-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
 			  <h2>Meow</h2>
+			  <a class="mb-0" style="font-size: 20px; color: white; border-style: dotted; border-color: white; " href="about.html">Infos</a>
           </div>
           <div class="col-md-12 col-lg-6 text-start text-lg-end" data-aos="fade-up" data-aos-delay="100">
-			  <a class="mb-0" style="font-size: 32px; color: white; border-style: dotted; border-color: white; " href="about.html">Infos</a>
+			  <div id="filters" class="filters">
+              <a href="#" data-filter="*" class="active">Tout</a>
+			  <a href="#" data-filter=".interactif">Interactif</a>
+              <a href="#" data-filter=".video">Video</a>
+			  <a href="#" data-filter=".photo">Photo</a>
+              <a href="#" data-filter=".autre">Autre</a>
+            </div>
           </div>
         </div>
         <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
