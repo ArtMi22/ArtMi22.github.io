@@ -1,33 +1,353 @@
-<!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>Test</title>
-        <style type="text/css">
-            body, html
-			
-            {
-                margin: 0; padding: 0; height: 100%; overflow: hidden;
-            }
+<!DOCTYPE html>
 
-            #content
-            {
-                position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
-            }
-        </style>
-    </head>
-    <body>
-		
-        <div id="content">
-            <iframe width="100%" height="100%" frameborder="0" src="./index.html"></iframe>
-			<script>
-    document.getElementById('audio_main').play();
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Hystérésis</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<script>
+window.onload = function fadeOutEffect() {
+    var fadeTarget = document.getElementById("loading");
+    var fadeEffect = setInterval(function () {
+        if (!fadeTarget.style.opacity) {
+            fadeTarget.style.opacity = 1;
+        }
+        if (fadeTarget.style.opacity > 0) {
+            fadeTarget.style.opacity -= 0.1;
+        } else {
+            clearInterval(fadeEffect);
+        }
+    }, 40);
+} 
 </script>
-				<audio id="audio_main">
-  <source src="/assets/sounds/skype.mp3" type="audio/ogg">
-</audio>
-	
-	
+  <!-- ======= Navbar ======= -->
+
+  <nav class="navbar navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="font-family: Remboy; font-size: 40px; font-weight: bold;">HYSTERESIS</a>
+		<div class="container">
+	<h2 style="font-size: 18px;">Sous-titre</h2>
+        <span></span>
+	  <br>
+    </div>
+	  <br>
+    </div>
+  </nav>
+
+  <main id="main">
+  
+<div id="loading">
+  <img id="loading-image" src="assets/img/loader.svg" alt="Loading..." />
+  <p class="mb-0">Loading ૮꒰ ˶• ༝ •˶꒱ა ♡</p>
+        </div> 
+
+
+    <!-- ======= Works Section ======= -->
+    <section class="section site-portfolio">
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
+			  <a class="mb-0" style="font-size: 20px; color: white; border-style: dotted; border-color: white; " href="about.html">Infos</a>
+          </div>
+          <div class="col-md-12 col-lg-6 text-start text-lg-end" data-aos="fade-up" data-aos-delay="100">
+			  <div id="filters" class="filters">
+              <a href="#" data-filter="*" class="active">Tout</a>
+			  <a href="#" data-filter=".interactif">Theme1</a>
+              <a href="#" data-filter=".video">Theme2</a>
+			  <a href="#" data-filter=".photo">Theme3</a>
+              <a href="#" data-filter=".autre">Theme4/Autre</a>
+            </div>
+          </div>
         </div>
-	
-    </body>
+        <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
+		<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">	
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			<div class="item interactif col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="./street.html"  class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Titre du projet</h3>
+                <span>Nom de l'artiste</span>
+              </div>
+              <img class="img-fluid" src="assets/thumbnails/dummy.png">
+            </a>
+          </div>
+			
+					
+	  </div>
+	  </div>
+                
+    </section><!-- End  Works Section -->
+
+    <!-- Wrapper for slides -->
+<!-- End Services Section -->
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="mb-1">&copy; Vous ne pouvez, en aucun cas, imprimer, reproduire, ou publier les vidéos et photos présentées sur ce site sans une permission écrite.</p>
+          <div class="credits">
+            Médias Intéractifs - 2022
+          </div>
+        </div>
+        <div class="col-sm-6 social text-md-end">
+			<a href="mailto:mi.uqam2022@outlook.com"><span class="bi bi-envelope"></span></a>
+          <a href="https://instagram.com/mi.uqam"><span class="bi bi-instagram"></span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>

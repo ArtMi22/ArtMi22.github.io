@@ -28,6 +28,54 @@
 	src: url(./fonts/Remboy.ttf)
 }
 
+#fullpage {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-color: black;
+}
+
+.enter {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  font-family: Remboy;
+  font-size: 50px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: white;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 8%;
+  left: 2.5%;
+  border: 0;
+  background: transparent;
+  box-sizing: border-box;
+  width: 0;
+  height: 40px;
+  border-color: transparent transparent transparent #ffffff;
+  transition: 100ms all ease;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 23px 0 23px 40px;
+}
+.fixed.paused {
+  border-style: double;
+  border-width: 0px 0 0px 35px;
+}
+.fixed:hover {
+  border-color: transparent transparent transparent #7d7d7d;
+}
+
 			
 			/* width */
 ::-webkit-scrollbar {
