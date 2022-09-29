@@ -101,7 +101,7 @@ body {
   background-COLOR: black;
 	background-size: 300% 300%;
 	animation: gradient 10s ease infinite;
-  font-family: "Monument", monospace;
+  font-family: "Charlevoix", monospace;
   color: white;
 }
 
@@ -116,7 +116,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6, .font-heading {
-  font-family: "Raleway", sans-serif;
+  font-family: "Monument";
 }
 
 .section {
@@ -486,6 +486,8 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 .custom-navbar .navbar-brand {
+  font-weight: bold;
+  font-family: "Remboy";
   font-size: 1.7rem;
   color: white;
   margin-left: 10px;
