@@ -33,12 +33,13 @@
     x.style.display = "block";
 }
             </script>
-            <script>
+            <!-- <script>
+
                 function PlayStop() { 
                 var myaudio = document.getElementById("audio_main");
                 return myaudio.paused ? myaudio.play() : myaudio.pause();
                 };
-                </script>
+                </script> -->
             <audio id="audio_main" src="assets/sounds/skype.mp3" loop></audio>
         <div style="position: relative; text-align: center; margin-top: 30%;"id="enter">
             
@@ -46,7 +47,8 @@
                   </div>
 
         <div id="content" style="display: none">
-            <script>
+          <!-- <script>
+
                 $(document).ready(function() {
        var btn = $(".fixed");
        btn.click(function() {
@@ -54,8 +56,31 @@
          return false;
        });
      });
-                 </script>
-            <button onclick="PlayStop()" class="fixed"></button>
+                 </script> 
+           <button onclick="PlayStop()" class="fixed"></button> -->
+<a id="speaker" href="#" class="speaker">
+  <span></span>
+</a>
+
+<script>
+
+    $('.speaker').click(function(e) {
+      e.preventDefault();
+    
+        $(this).toggleClass('mute');
+    });
+
+    
+var audio = document.getElementById('audio_main');
+
+document.getElementById('speaker').addEventListener('click', function (e)
+{
+    e = e || window.event;
+    audio.muted = !audio.muted;
+    e.preventDefault();
+}, false);
+
+    </script>
             <iframe width="100%" height="100%" frameborder="0" src="./iframe.html"></iframe>
 			
         </div>
