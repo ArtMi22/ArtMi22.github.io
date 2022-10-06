@@ -31,6 +31,11 @@
 	src: url(./fonts/Remboy.ttf)
 }
 
+@media (orientation: portrait) {
+  .social {
+    padding-top: 3%;
+  }
+}
 
 
 .mb-1 {
@@ -119,7 +124,7 @@ z-index: -1;
   border-color: #fff;
   border-width: 7px 7px 0 0;
   left: 18px;
-  top: 9px;
+  top: 11px;
   transition: all 0.2s ease-out;
 }
 .speaker:hover span:before {
