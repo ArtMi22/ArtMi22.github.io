@@ -35,8 +35,15 @@
   .social {
     padding-top: 3%;
   }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
+.artistlink {
+  margin-left: 1%;
+}
 
 .mb-1 {
   position: relative;
