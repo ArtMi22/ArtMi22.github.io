@@ -41,6 +41,28 @@
   }
 }
 
+#intro {
+  display: block;
+}
+
+#cult {
+  display: none;
+}
+
+#esp {
+  display: none;
+}
+
+#med {
+  display: none;
+}
+
+
+.desc {
+  display: none;
+}
+
+
 .artistlink {
   margin-left: 1%;
 }

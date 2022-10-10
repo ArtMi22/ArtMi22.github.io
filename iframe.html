@@ -74,14 +74,63 @@ window.onload = function fadeOutEffect() {
           </div>
           <div class="col-md-12 col-lg-6 text-start text-lg-end" data-aos="fade-up" data-aos-delay="100">
 			  <div id="filters" class="filters">
-              <a href="#" data-filter="*" class="active">Tout</a>
-			  <a href="#" data-filter=".culture">Culture</a>
-              <a href="#" data-filter=".espace">Espace</a>
-			  <a href="#" data-filter=".medias">Médias</a>
-              <a href="#" data-filter=".autre">Autre</a>
+             <span onclick="intro()"><a href="#" data-filter="*" class="active">Tout</a></span>
+			  <span onclick="culture()"><a href="#" data-filter=".culture">Culture</a></span>
+        <span onclick="espace()"><a href="#" data-filter=".espace">Espace</a></span>
+			  <span onclick="medias()"><a href="#"  data-filter=".medias">Médias</a></span>
             </div>
           </div>
         </div>
+        <div data-aos="fade-up">
+        <p id="intro">TXT INTRO</p>
+        <p id="cult">TXT CULT</p>
+        <p id="esp">TXT ESP</p>
+        <p id="med">TXT MED</p>
+        </div>
+        <script>
+function intro() {
+  var espace = document.getElementById("esp");
+  var medias = document.getElementById("med");
+  var culture = document.getElementById("cult");
+  var intro = document.getElementById("intro");
+  intro.style.display = "block";
+  culture.style.display = "none";
+  espace.style.display = "none";
+  medias.style.display = "none";
+}
+
+function culture(){
+  var espace = document.getElementById("esp");
+  var medias = document.getElementById("med");
+  var culture = document.getElementById("cult");
+  var intro = document.getElementById("intro");
+  intro.style.display = "none";
+  culture.style.display = "block";
+  espace.style.display = "none";
+  medias.style.display = "none";
+  
+}
+function espace() {
+  var espace = document.getElementById("esp");
+  var medias = document.getElementById("med");
+  var culture = document.getElementById("cult");
+  var intro = document.getElementById("intro");
+  intro.style.display = "none";
+  culture.style.display = "none";
+  espace.style.display = "block";
+  medias.style.display = "none";
+}
+function medias() {
+  var espace = document.getElementById("esp");
+  var medias = document.getElementById("med");
+  var culture = document.getElementById("cult");
+  var intro = document.getElementById("intro");
+  intro.style.display = "none";
+  culture.style.display = "none";
+  espace.style.display = "none";
+  medias.style.display = "block";
+}
+          </script>
         <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
 		<div class="item medias col-sm-6 col-md-4 col-lg-4 mb-4">
             <a href="./street.html"  class="item-wrap fancybox">
