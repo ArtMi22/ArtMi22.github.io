@@ -50,9 +50,6 @@ window.onload = function fadeOutEffect() {
       <a class="navbar-brand" href="iframe.html" style="font-family: Remboy; font-size: 40px; font-weight: bold;">HYSTERESIS</a>
 		<div class="container">
       <h2 id="intro" style="font-size: 14px">TXT INTRO <a style="text-decoration: underline; font-weight: bold;" href="about.html">Voir plus</a></h2>
-      <h2 id="cult" style="font-size: 14px">TXT CULT <a style="text-decoration: underline; font-weight: bold;" href="about.html">Voir plus</a></h2>
-      <h2 id="esp" style="font-size: 14px">TXT ESP <a style="text-decoration: underline; font-weight: bold;" href="about.html">Voir plus</a></h2>
-      <h2 id="med" style="font-size: 14px">TXT MED <a style="text-decoration: underline; font-weight: bold;" href="about.html">Voir plus</a></h2>
       
     </div>
     </div>
@@ -70,14 +67,18 @@ window.onload = function fadeOutEffect() {
     <section class="section site-portfolio">
       <div class="container">
         <div class="row mb-5 align-items-center">
-          <div class="col-md-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
-          </div>
-          <div class="col-md-12 col-lg-6 text-start text-lg-end" data-aos="fade-up" data-aos-delay="100">
-			  <div id="filters" class="filters">
-             <span onclick="intro()"><a href="#" data-filter="*" class="active">Tout</a></span>
-			  <span onclick="culture()"><a href="#" data-filter=".culture">Culture</a></span>
+
+          <div style="margin: auto;" class="col-md-12 col-lg-6 text-start text-lg-end" data-aos="fade-up" data-aos-delay="100">
+			  <div style="text-align: center;"id="filters" class="filters">
+        
+			  <span onclick="culture()"><a href="#" data-filter=".culture" class="active">Culture</a></span>
         <span onclick="espace()"><a href="#" data-filter=".espace">Espace</a></span>
 			  <span onclick="medias()"><a href="#"  data-filter=".medias">Médias</a></span>
+            </div>
+            <div style="margin-top: 1rem; text-align: left;">
+            <p id="cult" style="font-size: 14px">TXT CULT <a style="text-decoration: underline; font-weight: bold;" href="about.html">Voir plus</a></p>
+      <p id="esp" style="font-size: 14px">TXT ESP <a style="text-decoration: underline; font-weight: bold;" href="about.html">Voir plus</a></p>
+      <p id="med" style="font-size: 14px">TXT MED <a style="text-decoration: underline; font-weight: bold;" href="about.html">Voir plus</a></p>
             </div>
           </div>
         </div>
