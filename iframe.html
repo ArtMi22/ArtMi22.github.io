@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+  
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -28,16 +29,16 @@
 </head>
 
 <body>
-<script>
+  
+<script id="foo">
 
-setInterval(function fadeOutEffect() {
+window.onload = setTimeout(function fadeOutEffect() {
   document.getElementById("culturebut").click();
       }, 500);
-
-
-
+     
 
 </script>
+
 
 <script>
   window.onload = function clickculture() {
@@ -57,14 +58,10 @@ setInterval(function fadeOutEffect() {
   </script>
   <!-- ======= Navbar ======= -->
 
-  <nav class="navbar navbar-light custom-navbar">
-    <div class="container">
-      <a class="navbar-brand" href="iframe.html" style="font-family: Remboy; font-size: 40px; font-weight: bold;">HYSTERESIS</a>
-		<div class="container">
-      <h2 id="intro" style="font-size: 14px">TXT INTRO <a style="text-decoration: underline; font-weight: bold;" href="about.html">Voir plus</a></h2>
-      
-    </div>
-    </div>
+  <nav style="padding-top: 0px;"class="navbar navbar-light custom-navbar">
+      <img style="width: 100%;"id="bancult" src="assets/img/banniere_culture.jpg"/>
+      <img style="width: 100%; display: none;"id="banesp" src="assets/img/banniere_espace.jpg"/>
+      <img style="width: 100%; display: none;"id="banmed" src="assets/img/banniere_medias.jpg"/>
   </nav>
 
   <main id="main">
@@ -81,48 +78,89 @@ setInterval(function fadeOutEffect() {
         <div class="row mb-5 align-items-center">
 
           <div style="margin: auto;" class="col-md-12 col-lg-6 text-start text-lg-end" data-aos="fade-up" data-aos-delay="100">
-			  <div style="text-align: center;"id="filters" class="filters">
-
-
-        
+			  <div style="text-align: center;" >
+          <div id="filters" class="filters">
 			  <span  onclick="culture()"><a id="culturebut" href="#" data-filter=".culture" class="active">Culture</a></span>
         <span onclick="espace()"><a href="#" data-filter=".espace">Espace</a></span>
 			  <span onclick="medias()"><a href="#"  data-filter=".medias">Médias</a></span>
-            </div>
+      </div><a style="display: inline;" class="artistlink" target="_self" href="about.html">À propos</a>
+        </div>
+
             <div style="margin-top: 1rem; text-align: left;">
-            <p id="cult" style="font-size: 14px">TXT CULT <a style="text-decoration: underline; font-weight: bold;" href="about.html">Voir plus</a></p>
-      <p id="esp" style="font-size: 14px">TXT ESP <a style="text-decoration: underline; font-weight: bold;" href="about.html">Voir plus</a></p>
-      <p id="med" style="font-size: 14px">TXT MED <a style="text-decoration: underline; font-weight: bold;" href="about.html">Voir plus</a></p>
-            </div>
+              <div id="cult">
+            <p  style="font-size: 14px">Par l’avènement d’Internet, nous ne sommes plus limités à la culture de notre milieu direct. <span onClick="revcult()"><a id="cultdots" style="cursor: pointer; text-decoration: underline; font-weight: bold;">...</a></span></p>
+          <div id="cult1" style="font-size: 14px;">
+            <p>Notre génération est constamment influencée par l’environnement qui nous entoure. Malgré nous, nos opinions et perceptions se voient être teintées par les milieux physiques et virtuels auxquels nous sommes exposés.  </p>
+            <p>Nous avons grandi dans une ère électronique et nous vivons présentement dans un village global. Les relations intrapersonnelles et interpersonnelles peuvent prendre plusieurs formes. </p>
+            <p>Notre génération est confrontée à un fardeau social bien différent de celui des générations précédentes. Ultimement, l’hystérèse culturelle illustre la grande ouverture de notre génération sur le monde. </p>
+          </div>
+          </div>
+            <div id="esp" >
+            <p style="font-size: 14px">Ce qui sépare les choses, ce qui définit certains lieux, l'intérieur, l'extérieur et tout ce qui entoure notre planète.  <span onclick="revesp()"><a id="espdots" style="cursor: pointer; text-decoration: underline; font-weight: bold;">...</a></span></p>
+        
+          <div id="esp1" style="font-size: 14px;">
+          <p>Avec de nombreuses façons de le définir, l'espace est partout et se retrouve dans le monde matériel que nous visualisons. On oublie souvent la dimension du temps lorsque l’on pense à la conception de ces structures et à la croissance de l’environnement dont elles font partie.  </p>
+          <p>Avec la photographie, nous partageons notre regard sur ces milieux urbains. Cela nous permet de situer dans le temps ces géants intemporels face à nos courtes vies humaines. </p>
+          </div>
+        </div>
+          <div id="med">
+            <p style="font-size: 14px">En posant leur lentille sur des objets culturels, technologiques, et idéologiques, ces photographes réfléchissent sur notre rapport physique au temps. <span onclick="revmed()"><a id="meddots" style="cursor: pointer; text-decoration: underline; font-weight: bold;" >...</a></span></p>
+        
+          <div id="med1" style="font-size: 14px;">
+            <p>Les effets du temps sont les plus apparents quand ils sont matérialisés dans notre quotidien.</p>
+            <p>À leur manière, les médias sont des lentilles à travers lesquelles nous interprétons l’univers. Des espaces de transition et de traduction.   </p>
+            <p>L’influence des technologies et de la virtualité sur notre rapport au monde y sont frappantes, autant les progrès qu’elles apportent que leurs aspects plus discutables. Si les objets s’usent et se voient remplacés ou mis à jour, qu’en est-il de nous et de notre rapport au monde? </p>
+          </div>
+        </div> 
+          </div>
           </div>
         </div>
         <div data-aos="fade-up">
         </div>
+      
         <script>
 
-function intro() {
-  var espace = document.getElementById("esp");
-  var medias = document.getElementById("med");
-  var culture = document.getElementById("cult");
- 
- 
-  culture.style.display = "none";
-  espace.style.display = "none";
-  medias.style.display = "none";
+
+function revcult(){
+  document.getElementById("cult1").style.display='initial';
+ document.getElementById("cultdots").style.display='none';
 }
 
+function revesp(){
+ document.getElementById("esp1").style.display='initial';
+ document.getElementById("espdots").style.display='none';
+        
+}
+
+function revmed(){
+ document.getElementById("med1").style.display='initial';
+ document.getElementById("meddots").style.display='none';
+        
+}
+
+
 function culture(){
+
+
   var espace = document.getElementById("esp");
   var medias = document.getElementById("med");
   var culture = document.getElementById("cult");
-
-  
+ 
   culture.style.display = "block";
   espace.style.display = "none";
   medias.style.display = "none";
+
+  var bancult = document.getElementById("bancult");
+  var banesp = document.getElementById("banesp");
+  var banmed = document.getElementById("banmed");
+
+  bancult.style.display = "block";
+  banesp.style.display = "none";
+  banmed.style.display = "none";
   
 }
 function espace() {
+
   var espace = document.getElementById("esp");
   var medias = document.getElementById("med");
   var culture = document.getElementById("cult");
@@ -131,18 +169,39 @@ function espace() {
   culture.style.display = "none";
   espace.style.display = "block";
   medias.style.display = "none";
+
+  var bancult = document.getElementById("bancult");
+  var banesp = document.getElementById("banesp");
+  var banmed = document.getElementById("banmed");
+
+  bancult.style.display = "none";
+  banesp.style.display = "block";
+  banmed.style.display = "none";
 }
 function medias() {
+
+
   var espace = document.getElementById("esp");
   var medias = document.getElementById("med");
   var culture = document.getElementById("cult");
-  var intro = document.getElementById("intro");
-  intro.style.display = "none";
+ 
+
   culture.style.display = "none";
   espace.style.display = "none";
   medias.style.display = "block";
+
+  var bancult = document.getElementById("bancult");
+  var banesp = document.getElementById("banesp");
+  var banmed = document.getElementById("banmed");
+
+  bancult.style.display = "none";
+  banesp.style.display = "none";
+  banmed.style.display = "block";
 }
           </script>
+
+
+          
         <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
 		<div class="item culture col-sm-6 col-md-4 col-lg-4 mb-4">
             <a href="./yoshy_roseline.html"  class="item-wrap fancybox">

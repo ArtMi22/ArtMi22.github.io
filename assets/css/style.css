@@ -40,6 +40,17 @@
     display: none;
   }
 }
+#cult1 {
+  display: none;
+}
+
+#esp1 {
+  display: none;
+}
+
+#med1 {
+  display: none;
+}
 
 
 
@@ -370,6 +381,8 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 .h3 {
   font-size: 20px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .h4 {
@@ -585,7 +598,6 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 /* Custom Navbar */
 .custom-navbar {
-  padding-top: 50px;
   width: 100%;
   color: white;
 }
