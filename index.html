@@ -24,14 +24,119 @@
     </head>
     
     <body>
-        
+        <script>
+            var currentCallback;
+    
+    // override default browser alert
+    window.alert = function(msg, callback){
+      $('.message').text(msg);
+      $('.customAlert').css('animation', 'fadeIn 0.3s linear');
+      $('.customAlert').css('display', 'inline');
+      setTimeout(function(){
+        $('.customAlert').css('animation', 'none');
+      }, 300);
+      currentCallback = callback;
+    }
+    
+    $(function(){
+      
+      // add listener for when our confirmation button is clicked
+      $('.confirmButton').click(function(){
+        $('.customAlert').css('animation', 'fadeOut 0.3s linear');
+        setTimeout(function(){
+         $('.customAlert').css('animation', 'none');
+        $('.customAlert').css('display', 'none');
+        }, 300);
+        currentCallback();
+      })
+      
+      $('.rab').click(function(){
+        alert("Hystérésis est le nom donné à l’étude de l’influence d’un élément causant du changement à travers le temps. Cette définition ouverte s’applique à nombre de domaines d’études. Des sciences humaines aux sciences naturelles, divers éléments percutent le passage du temps. Ce mot méconnu traduit pourtant une sensation très tangible, particulièrement pour la jeunesse." + '\n' + "Nous sommes partis de ce concept pour observer les changements visibles apportés par le temps à diverses dimensions de notre environnement, tant au niveau des espaces et des techniques que des mouvements culturels et idéologiques. S’inspirant d’une ou de plusieurs images d’archives, caméra en main et les yeux grands ouverts, nous sommes partis explorer les mutations du temps. Se laissant beaucoup de liberté quant au format, au style et aux thèmes, le projet a donné une pluralité de points de vue qui reflètent plusieurs réflexions quant à l’avenir.", function(){
+          console.log("Callback executed");
+        })
+      });
+      
+      // our custom alert box
+    
+    });
+            </script>
+        <style>
+
+.customAlert {
+    z-index:9999; 
+  display: none;
+  position: fixed;
+  height: 45%;
+  width: 80%;
+  left: 50%;
+  top: 25%;
+  padding: 45px;
+  box-sizing: border-box;
+  margin-top: 20px;  /* Negative half of height. */
+  margin-left: -40%;
+  outline: 3px ridge #AB060A;
+  background: black;
+}
+         @media (orientation: portrait) {   .customAlert {
+ z-index:9999; 
+  display: none;
+  position: fixed;
+  height: 90%;
+  width: 80%;
+  left: 50%;
+  top: 1%;
+  padding: 45px;
+  box-sizing: border-box;
+  margin-top: 20px;  /* Negative half of height. */
+  margin-left: -40%;
+  outline: 3px ridge #AB060A;
+  background: black;
+}
+}
+
+.customAlert .message {
+    margin-top: 10px;
+    padding: 0px;
+    color: #AB060A;
+    font-size: 18px;
+    font-family: 'Times New Roman';
+    font-weight: normal;
+    text-align: center;
+}
+
+.customAlert input[type=button] {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 50%;
+    height: 36px;
+    margin-top: -62px;
+    margin-left: -25%;
+    outline: 1;
+    border: 0;
+    outline: 3px solid #AB060A;
+    background: black;
+    color: #AB060A;
+}
+
+.customAlert input[type=button]:hover {
+    transition: 0.3s;
+    cursor: pointer;
+    background: #AB060A;
+}
+            </style>
         <video id="homevid" style="position: absolute; margin: auto; margin-top: -10%; width: 100%;" autoplay muted loop id="myVideo">
             <source src="vid.mp4" type="video/mp4">
           </video>
           <div class="container">
-            <p class="mb-0" style="font-size: 25px; font-family: charlevoix; margin: 0 auto; position: absolute; max-width: 800px; top: 30%; left: 0; right: 0; text-align: center;">Constatations, critiques et espoirs cohabitent dans un portrait nuancé de notre génération qui invite à penser à notre contribution aux prochaines hystérésis. </p>
-        </div>
 
+            <p class="mb-0" style="font-size: 25px; font-family: charlevoix; margin: 0 auto; position: absolute; max-width: 800px; top: 30%; left: 0; right: 0; text-align: center;">Constatations, critiques et espoirs cohabitent dans un portrait nuancé de notre génération qui invite à penser à notre contribution aux prochaines hystérésis. </p>
+
+        </div>
+        <div class='customAlert'>
+            <p class='message'></p>
+            <input type='button' class='confirmButton' value='Ok'>
+          </div>
 		<script>
             function PlayMain() {
         var audio = document.getElementById("audio_main");
