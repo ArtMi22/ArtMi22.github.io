@@ -114,7 +114,7 @@ z-index: -1;
 }
 
 .enter {
-  
+  display: inline;
   background-color: transparent;
   color: white;
   cursor: pointer;
